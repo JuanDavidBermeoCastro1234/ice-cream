@@ -53,3 +53,47 @@ header{
     /* background:pink; */
 }
 
+main{
+    background: green;
+    padding-top: 45px;
+    padding-left: 75px;
+    padding-right: 75px;
+
+}
+
+.section__container{
+    /* background: blue; */
+    display: flex;
+    justify-content: space-between;
+}
+.articule__jumping{
+    width: 679px;
+    background: violet;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.articule__jumping h1{
+    color:var(--color-1);
+    font-family:"poppins-semibold";
+    font-size: 120px;
+    line-height: 110px;
+
+
+}
+
+.articule__jumping p{
+
+}
+.div__buttons {
+    background: rebeccapurple;
+    display: flex;
+}
+.div__buttons a{
+
+}
+
+
+
+
