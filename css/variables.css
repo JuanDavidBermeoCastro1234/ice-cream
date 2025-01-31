@@ -16,3 +16,19 @@
     font-family:"poppins-semibold";
     src: url(../storage/font/Poppins/Poppins-SemiBold.ttf);
 }
+
+@font-face {
+    font-family:"poppins-Regular";
+    src: url(../storage/font/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family:"poppins-Thin";
+    src: url(../storage/font/Poppins/Poppins-Thin.ttf);
+}
+
+
+@font-face {
+    font-family:"poppins-Medium";
+    src: url(../storage/font/Poppins/Poppins-Medium.ttf);
+}

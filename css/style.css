@@ -5,7 +5,11 @@
     box-sizing: border-box;
 }
 body{
-    background-color:var(--color-8) ;
+    background-image: url(../storage/img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    
 }
 
 header{
@@ -54,7 +58,7 @@ header{
 }
 
 main{
-    background: green;
+    /* background: green; */
     padding-top: 45px;
     padding-left: 75px;
     padding-right: 75px;
@@ -65,10 +69,12 @@ main{
     /* background: blue; */
     display: flex;
     justify-content: space-between;
+    margin-top: 111px;
+
 }
 .articule__jumping{
     width: 679px;
-    background: violet;
+    /* background: violet; */
     display: flex;
     flex-direction: column;
 }
@@ -78,22 +84,113 @@ main{
     color:var(--color-1);
     font-family:"poppins-semibold";
     font-size: 120px;
-    line-height: 110px;
+    line-height: 91.4%;
 
 
 }
 
 .articule__jumping p{
+    margin-top: 26px;
+    font-family:"poppins-semibold" ;
+    /* display: flex; */
+    font-size: 24px;
+    color: var(--color-6);
+    line-height:123% ;
 
 }
 .div__buttons {
-    background: rebeccapurple;
+    margin-top: 26px;
+    /* background: rebeccapurple; */
     display: flex;
+    gap: 38px;
 }
 .div__buttons a{
+    width: 264px;
+    height: 86px;
+    border-radius: 14px;
+    outline: 1px solid var(--color-1);
+    background: transparent;
+    font-family: "poppins-Thin";
+    font-size: 32px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-1);
+    text-decoration: none;
+}
+
+.div__buttons:hover a:hover{
+    outline: none;
+    backdrop-filter: blur(24px);
 
 }
 
+
+
+.article_reviews {
+    /* background: red; */
+    padding: 20px;
+}
+.div_reviews-container {
+    width: 345px;
+    height: 202px;
+    background:var(--color-1);
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div_reviews-cards {
+    /* background: green; */
+    /* padding: 20px; */
+}
+
+.div_reviews-profile {
+    /* background: violet; */
+    gap: 16px;
+    /* padding: 20px; */
+    display: flex;
+    /* align-items: center; */
+}
+.div_reviews-profile img{
+    /* background: orange; */
+    /* padding: 20px; */
+    object-fit: contain;
+}
+
+.div_reviews-cards p{
+    font-family:"poppins-Medium";
+    text-align: justify;
+    margin-top: 12px;
+    font-size: 18px;
+    color: var(--color-7);
+    width: 227px;
+}
+
+.div_reviews-rating {
+    /* background: yellow; */
+    /* padding: 20px; */
+}
+.div_reviews-rating h3{ 
+    color: var(--color-2);
+    font-family: "poppins-Medium";
+    font-size: 28px;
+
+}
+
+.div_reviews-stars {
+    /* background: olive; */
+    /* padding: 20px; */
+    /* margin-top: 5px; */
+}
+
+.div_reviews-stars img{
+    /* background: turquoise; */
+    padding: 0;
+}
 
 
 
