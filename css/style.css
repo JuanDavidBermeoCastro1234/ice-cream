@@ -1,3 +1,4 @@
+
 @import url(variables.css);
 *{
     margin: 0;
@@ -9,52 +10,51 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    
-}
+    background-color: var(--color-8);
 
+    /* background-color: var(--color-8); */
+}
 header{
     /* background: red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 45px;
     padding-left: 75px;
     padding-right: 75px;
 
 }
-
 .header__logo{
     /* background: blue; */
 }
-
 .header__logo img{
 
 }
-
 .header__nav{
     /* background: green; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 54px;
-    
 }
-
-.header__nav li {
-    /* background: yellow; */
+.header__nav li{
     list-style: none;
 }
-
 .header__nav li a{
-    font-family:"poppins-semibold";
-    color:var(--color-1);
-    text-decoration:none;
+    font-family: "Poppins-SemiBold";
+    color: var(--color-1);
+    text-decoration: none;
     font-size: 28px;
     display: flex;
 }
+.header__nav li a img{
 
+}
 .header__menu{
-    /* background:pink; */
+    /* background: violet; */
+}
+.header__menu img{
+
 }
 
 main{
@@ -62,47 +62,42 @@ main{
     padding-top: 45px;
     padding-left: 75px;
     padding-right: 75px;
-
 }
-
 .section__container{
-    /* background: blue; */
     display: flex;
     justify-content: space-between;
     margin-top: 111px;
-
 }
-.articule__jumping{
+.section__container article:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+}
+.article__jumping{
     width: 679px;
     /* background: violet; */
     display: flex;
     flex-direction: column;
 }
-
-
-.articule__jumping h1{
-    color:var(--color-1);
-    font-family:"poppins-semibold";
+.article__jumping h1{
+    color: var(--color-1);
+    font-family: "Poppins-SemiBold";
     font-size: 120px;
     line-height: 91.4%;
-
-
 }
-
-.articule__jumping p{
+.article__jumping p{
     margin-top: 26px;
-    font-family:"poppins-semibold" ;
-    /* display: flex; */
+    font-family: "Poppins-Medium";
     font-size: 24px;
     color: var(--color-6);
-    line-height:123% ;
-
+    line-height: 123%;
 }
-.div__buttons {
+.div__buttons{
     margin-top: 26px;
     /* background: rebeccapurple; */
     display: flex;
     gap: 38px;
+    
 }
 .div__buttons a{
     width: 264px;
@@ -110,87 +105,253 @@ main{
     border-radius: 14px;
     outline: 1px solid var(--color-1);
     background: transparent;
-    font-family: "poppins-Thin";
+    font-family: "Poppins-Thin";
     font-size: 32px;
     font-weight: 900;
+    color: var(--color-1);
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: var(--color-1);
-    text-decoration: none;
 }
-
 .div__buttons:hover a:hover{
     outline: none;
     backdrop-filter: blur(24px);
-
 }
 
 
+#reviews{
+    /* background: blue; */
+    /* height: 281px; */
+    height: 221px;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 27px;
+    display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	/* padding-bottom: calc(var(--cards) * var(--cardTopPadding)); */
+	/* margin-bottom: var(--cardMargin); */
+}
+/* Oculta la barra de desplazamiento predeterminada */
+#reviews::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
 
-.article_reviews {
+/* Personaliza el riel de la barra de desplazamiento */
+#reviews::-webkit-scrollbar-track {
+    background: transparent; /* Color del fondo */
+}
+
+/* Personaliza el 'thumb' de la barra de desplazamiento */
+#reviews::-webkit-scrollbar-thumb {
+    background: var(--color-1); /* Color del thumb */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estiliza el thumb cuando se pasa el cursor sobre él */
+#reviews::-webkit-scrollbar-thumb:hover {
+    background: var(--color-6);
+    cursor: grab;
+}
+#reviews::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+/* Estiliza los botones de la barra de desplazamiento (si los hay) */
+#reviews::-webkit-scrollbar-button {
+    display: none;
+}
+.div__reviews-container:nth-child(1){
+    --index: 1;
+}
+.div__reviews-container:nth-child(2){
+    --index: 2;
+
+    /* top: 20px; */
+}
+.div__reviews-container:nth-child(3){
+    --index: 3;
+    /* top: 40px; */
+}
+.div__reviews-container:nth-child(4){
+    --index: 4;
+    /* top: 60px; */
+}
+.article__reviews {
     /* background: red; */
-    padding: 20px;
+    overflow-y: auto;
 }
-.div_reviews-container {
+.div__reviews-container {
     width: 345px;
     height: 202px;
-    background:var(--color-1);
+    background: var(--color-1);
     border-radius: 18px;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border: 1px solid var(--color-5);
+    position: sticky;
+    top: 0px;
+    padding-top: calc(var(--index) * var(--cardToppadding));
+    z-index: var(--index);
 }
-.div_reviews-cards {
+.div__reviews-cards {
     /* background: green; */
     /* padding: 20px; */
 }
-
-.div_reviews-profile {
+.div__reviews-cards::after {
+   content: "x";
+   cursor: pointer;
+   font-family: "Poppins-Medium";
+   color: var(--color-1);
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 35px;
+   height: 35px;
+   background: var(--color-8);
+   border: 1px solid var(--color-6);
+   border-radius: 100%;
+   left: -18px;
+   top: -18px;
+}
+.div__reviews-profile {
     /* background: violet; */
+    /* padding: 20px; */
     gap: 16px;
-    /* padding: 20px; */
     display: flex;
-    /* align-items: center; */
 }
-.div_reviews-profile img{
+.div__reviews-profile img {
     /* background: orange; */
-    /* padding: 20px; */
     object-fit: contain;
+    /* padding: 20px; */
 }
-
-.div_reviews-cards p{
-    font-family:"poppins-Medium";
+.div__reviews-cards p{
+    font-family: "Poppins-Medium";
     text-align: justify;
     margin-top: 12px;
     font-size: 18px;
     color: var(--color-7);
-    width: 227px;
+    width: 277px;
+    
 }
-
-.div_reviews-rating {
+.div__reviews-rating {
     /* background: yellow; */
     /* padding: 20px; */
 }
-.div_reviews-rating h3{ 
+.div__reviews-rating h3{
     color: var(--color-2);
-    font-family: "poppins-Medium";
+    font-family: "Poppins-Medium";
     font-size: 28px;
-
 }
-
-.div_reviews-stars {
+.div__reviews-stars {
     /* background: olive; */
     /* padding: 20px; */
-    /* margin-top: 5px; */
 }
-
-.div_reviews-stars img{
+.div__reviews-stars img{
     /* background: turquoise; */
     padding: 0;
+
 }
 
+.div__choose-type {
+    /* background: violet; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+   
+}
+.div__choose-type h3{
+    color: var(--color-1);
+    font-family: "Poppins-Medium";
+    font-size: 20px;
 
+}
+.div__choose-type-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.div__choose-type-buttons a{
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    background: var(--color-4);
+    font-family: "Poppins-Thin";
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--color-1);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    backdrop-filter: blur(3px);
+}
 
+.section__container-products {
+    background: red;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+}
+.div__trendy {
+    background: violet;
+}
+.div__trendy h2{
+}
+.div__trendy img{
+}
+.article__products{
+    background: green;
+    /* padding: 20px; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 52px;
+    row-gap: 59px;
+}
+.form__container-product {
+    background: orange;
+    overflow: hidden;
+    width: 690px;
+    height: 324px;
+    display: flex;
+    align-items: center;
+    outline: 1px solid var(--color-1);
+    border-radius: 20px;
+
+}
+.form__container-product img{
+    background: violet;
+    width: 217px;
+    height: 217px;
+    object-fit: contain;
+}
+.div__product {
+    background: turquoise;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+.div__product h3{
+}
+.div__product label{
+}
+.div__type-order {
+    background: yellow;
+    display: flex;
+}
+.div__type-order input[type="submit"]{
+    
+}
+.div__product-amount {
+    background: olive;
+}
+.div__product-amount input[type="number"]{
+}
