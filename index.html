@@ -22,9 +22,15 @@
                 </a>
             </li>
         </nav>
-        <div class="header__menu">
-            <img src="storage/img/menu.png">
-        </div>
+    <!--menu fachero --> 
+<div class="container">
+    <div class="toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <!-- menu fachero -->
     </header>
     <main>
         <section class="section__container">
@@ -120,13 +126,17 @@
                         <a href="#"><img src="storage/img/ice-cream-cup-4.svg"></a>
                     </div>
                 </div>
-            </article>
+            </article>  
         </section>
         <section class="section__container-products">
             <div class="div__trendy">
                 <h2>Trendy</h2>
                 <img src="storage/img/fire.svg">
             </div>
+
+
+<!-- /**************forms***************/ -->
+
             <article class="article__products">
                 <form action="?" method="GET" class="form__container-product">
                     <img src="storage/img/product_1.png" >
@@ -139,14 +149,12 @@
                         </div>
                         <div  class="div__product-amount">
                             <label>Rs. 199/-</label>
-                            <input type="number" name="amount" value="0">
-                            /****haciendo pruebas******/
-                            <button type="button">+</button>
-                            <input type="number" value="01" min="1">
-                            <button type="button">-</button>
+                            <input type="number" name="amount" value="0" min="0">
                         </div>
                     </div>
                 </form>
+
+                <!-- /**********segundo formulario*********/ -->
                 <form action="?" method="GET" class="form__container-product">
                     <img src="storage/img/product_2.png" >
                     <div class="div__product">
@@ -158,7 +166,7 @@
                         </div>
                         <div  class="div__product-amount">
                             <label>Rs. 199/-</label>
-                            <input type="number" name="amount" value="0">
+                            <input type="number" name="amount" value="0" min="0">
                         </div>
                     </div>
                 </form>
@@ -173,7 +181,7 @@
                         </div>
                         <div  class="div__product-amount">
                             <label>Rs. 199/-</label>
-                            <input type="number" name="amount" value="0">
+                            <input type="number" name="amount" value="0" min="0">
                         </div>
                     </div>
                 </form>
@@ -188,7 +196,9 @@
                         </div>
                         <div  class="div__product-amount">
                             <label>Rs. 199/-</label>
-                            <input type="number" name="amount" value="0">
+                            <input type="number" name="amount" value="0" min="0">
+                            <button onclick="increment()">+</button>
+                            <button onclick="decrement()">-</button>
                         </div>
                     </div>
                 </form>
