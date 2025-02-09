@@ -442,6 +442,30 @@ main{
     outline: 1px solid var(--color-1);
     color: var(--color-1);
 }
+.form__container-product:hover .button2{
+    color: var(--color-2);
+    border-left: 2px solid #000;
+
+
+}
+.form__container-product:hover .button3{
+    color: var(--color-2);
+    border-right: 2px solid #000;
+
+
+}
+.form__container-product:active .button2{
+    color: var(--color-1);
+    border-left: 2px solid #fff;
+
+    
+}
+.form__container-product:active .button3{
+    color: var(--color-1);
+    border-right: 2px solid #fff;
+
+}
+
 
 .form__container-product input[type="number"]{
     text-align: center;
@@ -454,11 +478,29 @@ main{
     margin: 0; 
 }
 
-.form__container-product button{
-    /* text-align: center; */
+.button3{
+    width: 19px;
     position: absolute;
-    margin-left: 100px;
+    right: 130px;
+    color: var(--color-1);
+    background-color: transparent;
+    border: none;
+    border-right: 2px solid #fff;
+    cursor: pointer;
+
 }
+.button2{
+    width: 19px;
+    position: absolute;
+    left: 600px;
+    color: var(--color-1);
+    background-color: transparent;
+    border: none;
+    border-left: 2px solid #fff;
+    cursor: pointer;
+
+}
+
 
 /************probando si srive para asignarle estilos al input***************/
 
